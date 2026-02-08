@@ -1,0 +1,105 @@
+.stat-card {
+    position: relative;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-base);
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-500), var(--primary-600));
+    transition: all var(--transition-base);
+}
+
+.stat-card-accent::before {
+    background: linear-gradient(90deg, var(--accent-500), var(--accent-600));
+}
+
+.stat-card-success::before {
+    background: linear-gradient(90deg, var(--success), hsl(142, 71%, 40%));
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-card:hover::before {
+    height: 6px;
+}
+
+.stat-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.stat-card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+    color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card-accent .stat-card-icon {
+    background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
+}
+
+.stat-card-success .stat-card-icon {
+    background: linear-gradient(135deg, var(--success), hsl(142, 71%, 40%));
+}
+
+.stat-card-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+
+.stat-badge-up {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.stat-badge-down {
+    background: var(--error-light);
+    color: var(--error);
+}
+
+.stat-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-card-value {
+    font-size: var(--font-size-3xl);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.stat-card-label {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

@@ -1,0 +1,17 @@
+{
+    "appId": "com.bjjtracker.app",
+    "appName": "BJJ Tracker",
+    "webDir": "dist",
+    "server": {
+        "androidScheme": "https"
+    },
+    "plugins": {
+        "SplashScreen": {
+            "launchShowDuration": 2000,
+            "backgroundColor": "#4a90e2",
+            "androidSplashResourceName": "splash",
+            "androidScaleType": "CENTER_CROP",
+            "showSpinner": false
+        }
+    }
+}
